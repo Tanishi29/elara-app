@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -116,6 +116,26 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
+  )
+}
+
+export default App */
+
+import './App.css'
+
+function App() {
+  return (
+    <div className="app-container">
+      <aside className="sidebar">
+        Sidebar
+      </aside>
+      <main className="main-content">
+        Main Content
+      </main>
+     <aside className="right-panel">
+      Right Panel
+     </aside>
+    </div>
   )
 }
 
