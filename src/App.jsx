@@ -122,13 +122,12 @@ function App() {
 export default App */
 
 import './App.css'
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
     <div className="app-container">
-      <aside className="sidebar">
-        Sidebar
-      </aside>
+      <Sidebar />
       <main className="main-content">
         Main Content
       </main>
