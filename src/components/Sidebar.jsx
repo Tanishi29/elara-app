@@ -1,9 +1,7 @@
-import { useState } from 'react'
+
 import './Sidebar.css'
 
-function Sidebar() {
-    const [activePage, setActivePage] = useState('calendar')
-
+function Sidebar({ activePage, setActivePage }) {
     return(
         <aside className="sidebar">
         <div className="sidebar-logo">
@@ -14,7 +12,7 @@ function Sidebar() {
         <nav className="sidebar-nav">
             <button
             className={`nav-btn ${activePage === 'calendar' ? 'active' : ''}`}
-          onClick={() => setActivePage('calendar')}
+            onClick={() => setActivePage('calendar')}
             >
             Calendar
             </button>
