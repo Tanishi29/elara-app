@@ -125,6 +125,7 @@ import { useState } from 'react'
 import './App.css'
 import Sidebar from './components/Sidebar'
 import CalendarView from './components/CalendarView'
+import RightPanel from './components/RightPanel'
 
 function App() {
   const [activePage, setActivePage] = useState('calendar')
@@ -137,9 +138,7 @@ function App() {
         {activePage === 'tasks' && <h1>Tasks View</h1>}
         {activePage === 'myweek' && <h1>My Week View</h1>}
       </main>
-      <aside className="right-panel">
-        Right Panel
-      </aside>
+      <RightPanel />
     </div>
   )
 }
