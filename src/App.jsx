@@ -126,6 +126,7 @@ import './App.css'
 import Sidebar from './components/Sidebar'
 import CalendarView from './components/CalendarView'
 import RightPanel from './components/RightPanel'
+import TasksView from './components/TasksView'
 
 function App() {
   const [activePage, setActivePage] = useState('calendar')
@@ -135,7 +136,7 @@ function App() {
       <Sidebar activePage={activePage} setActivePage={setActivePage} />
       <main className="main-content">
         {activePage === 'calendar' && <CalendarView />}
-        {activePage === 'tasks' && <h1>Tasks View</h1>}
+        {activePage === 'tasks' && <TasksView/>}
         {activePage === 'myweek' && <h1>My Week View</h1>}
       </main>
       <RightPanel />
