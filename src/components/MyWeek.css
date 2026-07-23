@@ -1,0 +1,189 @@
+
+.myweek-view{
+    padding: 32px 40px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.myweek-header {
+    margin-bottom: 32px;
+}
+
+.myweek-header h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.myweek-header p{
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.bookshelf {
+    margin-bottom: 32px;
+}
+
+.books-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 0;
+}
+
+.book{
+    width: 80px;
+  height: 180px;
+  border-radius: 4px 10px 10px 4px;
+  border-left: 4px solid rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6px 10px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.book:hover{
+    transform: translateY(-8px);
+}
+
+.book.selected{
+    transform: translateY(-12px);
+}
+
+.book.today-book::after{
+    content: '★';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.book-flower{
+    font-size: 28px;
+    line-height: 1;
+}
+
+.book-day{
+    font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.book-badge{
+    position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.3);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shelf-planel{
+    height: 14px;
+    background: #C4A882;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);;
+}
+
+.day-panel-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.day-panel-header h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.close-btn{
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.day-input{
+   flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none; 
+}
+
+.day-add-btn {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.day-empty{
+    font-size: 14px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.day-task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.day-task.done span{
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.task-checkbox{
+    width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-checkbox.checked{
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+
+
